@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VR Healer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> -->
+
+</head>
+<body>
+    
+     <!-- <nav>
+        <div class="logo">
+            <img src="assets/images/VRlogo.png" alt="VR Logo"> 
+        </div>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#features">Services</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+        </ul>
+        <button id="login-btn">Login</button>
+        <button class="btn">Book an Appointment</button>
+    </nav> -->
+
+   <!--  <nav>
+        <div class="logo">
+            <img src="vr-logo.png" alt="VR Logo"> 
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#features">Services</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#contact">Contact Us</a></li> -->
+            <!-- <li><a href="#loginModal">Login</a></li>
+        </ul>
+        <button id="login-btn">Login</button>
+        <button class="btn">Book an Appointment</button>
+    </nav> -->
+      <!-- Navbar -->
+
+       <!-- <nav>
+        <div class="logo">
+            <img src="assets/images/VRlogo.png" alt="VR Logo" style="height: 85px; width: auto; margin-left: 40px; margin-top: -16px;"> 
+            
+        </div>
+        <ul id="menu" class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#features">Services</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+        </ul>
+        <div class="buttons">
+            <button id="login-btn" style="background-color: #664D79; color: #fff; padding: 10px 20px; border: none; border-radius: 5px; margin-left: 10px; /* Space between buttons */ cursor: pointer;">Login</button>
+            <button class="btn"><a href="./main/form.html">Book an Appointment</a></button>
+        </div>
+    </nav> -->
+    <!-- Navbar -->
+    <nav>
+      <div class="logo">
+          <img src="assets/images/VRlogo.png" alt="VR Logo">
+      </div>
+      
+      <ul id="menu" class="nav-links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#features">Services</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+      </ul>
+
+      <div class="buttons">
+          <button id="login-btn">Login</button>
+          <button class="btn"><a href="./main/form.html">Book an Appointment</a></button>
+      </div>
+
+      <!-- Mobile Menu Icon -->
+      <div class="menu-toggle" id="mobile-menu">
+          <i class="fas fa-bars"></i>
+      </div>
+  </nav>
+
+  <!-- Dummy Content for Scroll Effect -->
+  <div class="content">
+      <h1>Welcome to VR Healer</h1>
+      <p>Scroll down to see the fixed navbar effect.</p>
+  </div>
+
+
+
+<!--   <nav class="navbar" style="background: #b3abcb">
+    <div class="container">
+        <img src="assets/images/VRlogo.png" alt="Logo" style="height: 85px; width: auto; margin-left: -76px; margin-top: -19px;">
+        
+      <ul class="nav-links" style="margin: 3px;
+    min-width: max-content">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contactForm">Contact Us</a></li>
+        <li><button id="login-btn" style="    background: #b0aec9;
+    border-radius: 7px;
+    width: 124%;
+    height: 172%;
+    margin-right: 30px;
+}">Login</button></li>
+      </ul>
+      <a href="#" class="btn" style="background: #8957BA;">Book an Appointment</a>
+    </div>
+  </nav> -->
+ <!-- Login Modal -->
+<div id="loginModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <div id="login-choices">
+      <h2>Choose Login Option</h2>
+      <div class="login-options">
+        <div class="login-card">
+          <img src="assets/images/admin1.jpg" alt="Admin">
+          <h3 target="_self">Admin Login</h3>
+          <button id="admin-login-btn" class="login-btn">Click Here</button>
+        </div>
+        <div class="login-card">
+          <img src="assets/images/therapist.jpg" alt="Therapist">
+          <h3>Therapist Login</h3>
+          
+          <button  class="login-btn"><a href="./main/form.html" target="_self" style="color: #ffffff; text-decoration: none;">Click Here</a></button>
+          
+        </div>
+        <div class="login-card">
+          <img src="assets/images/patient1.jpg" alt="Patient">
+          <h3>Patient Login</h3>
+          <button class="login-btn"><a href="./main/form.html" target="_self" style="color: #ffffff; text-decoration: none;">Click Here</a></button>
+        </div>
+      </div>
+    </div>
+
+    <div id="admin-login-form" style="display: none;">
+      <h2>Admin Login</h2>
+      <form id="loginForm">
+        <label for="username">Username</label>
+        <input type="text" id="username" placeholder="Enter Username" required>
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Enter Password" required>
+        <button type="submit" class="login-btn">Login</button>
+      </form>
+      <a id="back-to-home" href="#" style="text-decoration: none;">Back to Home Page</a>
+    </div>
+
+    
+
+</div>
+</div>
+
+ 
+   
+
+<!-------------------------- home ----------------->
+
+    <section id="home" >
+      <div class="container">
+         <img src="assets/images/vrheadset.jpg">
+    <!-- Left Side -->
+    <!-- <div class="text-content">
+      <h1>VR Healer</h1>
+      <p>Virtual Serenity, Real Healing</p>
+    </div> -->
+
+    <!-- Right Side -->
+    <!-- <div class="image-content">
+      <div class="cloud">
+        <img src="assets/images/boyVR.jpg" alt="VR Headset">
+      </div>
+    </div> -->
+  </div>
+      <!-- <div class="container" style="height: 500px"> -->
+    <!-- Left Side -->
+    <!-- <div class="text-content">
+      <h1>VR Healer</h1>
+      <p>Virtual Serenity, Real Healing</p>
+    </div> -->
+
+    <!-- Right Side -->
+    <!-- <div class="image-content">
+      <img src="assets/images/boyVR.jpg" alt="VR Headset" border="">
+    </div>
+  </div> -->
+        <!-- <div class="hero-slider">
+            <div class="slide">Welcome to VR Healer</div>
+            <img src="">
+            <div class="slide">Personalized Phobia Therapy</div>
+            <div class="slide">Immersive VR Experience</div>
+        </div> -->
+    </section>
+    <!-- <section id="services">
+        <h2 style="margin-left: 44%;">Our Key Features</h2>
+        <div class="features">
+            <div class="feature-item">Appointment Booking</div>
+            <div class="feature-item">Immersive Environment</div>
+            <div class="feature-item">Interactive Scenarios</div>
+            <div class="feature-item">Progress Tracking</div>
+            <div class="feature-item">Real-Time Feedback</div>
+            <div class="feature-item">Note Taking</div>
+        </div>
+    </section> -->
+
+<!----------------------------- features -------------------->
+     <section id="features" style="background-color: #fff; border-bottom: inset; width: 100%;">
+        <h2 style="color: #1f0553; text-align: center;">Our Key Features</h2>
+        <p style="text-align: center;">Take a look at some of our key features</p>
+
+        <div class="feature-container">
+            <div class="feature">
+                <div class="icon-container">
+                    <i class="fas fa-calendar-check"></i>
+                </div>
+                <h3 class="feature-title">Appointment Booking</h3>
+                <p class="feature-description">Easily schedule appointments with our intuitive booking system.</p>
+            </div>
+
+            <div class="feature">
+                <div class="icon-container">
+                    <i class="fas fa-vr-cardboard"></i>
+                </div>
+                <h3 class="feature-title">Immersive Environment</h3>
+                <p class="feature-description">Experience a lifelike virtual environment for enhanced learning.</p>
+            </div>
+
+            <div class="feature">
+                <div class="icon-container">
+                    <i class="fas fa-code-branch"></i>
+                </div>
+                <h3 class="feature-title">Interactive Scenarios</h3>
+                <p class="feature-description">Engage in realistic scenarios to practice and improve your skills.</p>
+            </div>
+
+            <div class="feature">
+                <div class="icon-container">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <h3 class="feature-title">Progress Tracking</h3>
+                <p class="feature-description">Monitor your progress and track your achievements with detailed reports.</p>
+            </div>
+
+            <div class="feature">
+                <div class="icon-container">
+                    <i class="fas fa-heartbeat"></i>
+                </div>
+                <h3 class="feature-title">Realtime Feedback</h3>
+                <p class="feature-description">Get instant feedback on your performance to identify areas for improvement.</p>
+            </div>
+
+            <div class="feature">
+                <div class="icon-container">
+                    <i class="fas fa-pencil-alt"></i>
+                </div>
+                <h3 class="feature-title">Note Taking</h3>
+                <p class="feature-description">Take notes and organize your thoughts during your learning journey.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- <section id="services" class="key-features" style="background-color: #fff; border-bottom: inset; width: 100%;">
+    <h1>Our Key Features</h1>
+    <p>Take a look at some of our key features</p>
+    <div class="features-container">
+      <div class="feature">
+        <div class="icon animate">
+          <i class="fas fa-calendar-check"></i>
+        </div>
+        <p>Appointment Booking</p>
+      </div>
+      <div class="feature">
+        <div class="icon animate">
+          <i class="fas fa-vr-cardboard"></i>
+        </div>
+        <p>Immersive Environment</p>
+      </div>
+      <div class="feature">
+        <div class="icon animate">
+          <i class="fas fa-handshake"></i>
+        </div>
+        <p>Interactive Scenarios</p>
+      </div>
+      <div class="feature">
+        <div class="icon animate">
+          <i class="fas fa-file-alt"></i>
+        </div>
+        <p>Progress Tracking</p>
+      </div>
+      <div class="feature">
+        <div class="icon animate">
+          <i class="fas fa-heartbeat"></i>
+        </div>
+        <p>Realtime Feedback</p>
+      </div>
+      <div class="feature">
+        <div class="icon animate">
+          <i class="fas fa-pencil-alt"></i>
+        </div>
+        <p>Note Taking</p>
+      </div>
+    </div>
+  </section> -->
+
+<!-------------------------- aboutus ----------->
+
+  <section id="about" class="about-us" style=" margin: 0;
+      padding: 0; font-family: Arial, sans-serif;">
+  <!-- display: flex; background-color: white; width: 103%; -->
+    <div class="about-section">
+    <div class="content">
+      <div class="logo">
+        <img src="assets/images/VRlogo.png" alt="VR Healer Logo">
+      </div>
+      <div class="text">
+        <h2>About Us</h2>
+        <p>
+          The VR Healer project is initiated to address the pressing requirement for accessible 
+          and personalized phobia therapy. Phobias, such as claustrophobia, aquaphobia, and nyctophobia, 
+          significantly impact individuals' well-being. Traditional therapeutic approaches may be 
+          limited in effectiveness.
+        </p>
+        <p>
+          By leveraging virtual reality technology, this project aims to create a cost-effective and 
+          widely accessible solution. Virtual reality helps users face and manage their concerns in a 
+          safe, realistic setting, improving overall well-being and therapeutic outcomes.
+        </p>
+      </div>
+    </div>
+  </div>
+        <!-- <div class="row no-margin" style="width: 450%; margin-top: -16px;"> -->
+            <!-- <div class="col-sm-6 image-bg no-padding"> -->
+             <!--    <img src="assets/images/Vrlogo.png" style="no-padding; width: 100%;">
+
+            </div>
+            <div class="col-sm-6 abut-yoiu" style="min-width: fit-content;">
+              <h3 style="font-size: 2em; color: #5a4482;">About Us</h3>
+            </div>
+            <div class="col-sm-6 abut-yoiu" style="margin: auto;
+    width: 380%; margin-right: 44px; height: 325PX;"> -->
+                <!-- <h3>About Us</h3> -->
+                <!-- <p style="color: #4d85ae;">The VR Healer project is initiated to address the pressing require for accessible and personalized phobia therapy. Phobias, such as claustrophobia, aquaphobia, and nyctophobia, significantly impact individuals' well-being. Traditional therapeutic approaches may be limited in effectiveness. By leveraging virtual reality technology, this project aims to create a cost-effective and widely accessible solution. The immersive nature of VR provides a controlled and realistic platform for users to confront and manage their fears gradually. 
+                It offers a life-changing cure for those with phobias such as nyctophobia, aquaphobia, and claustrophobia. Through the utilization of virtual reality technology, the initiative offers a broadly accessible and reasonably priced platform for customized phobia therapy. Because virtual reality (VR) is so immersive, it helps people face and eventually manage their concerns in a safe, realistic setting, which improves overall well-being and therapeutic outcomes.</p>
+            </div>
+        </div> -->
+    </section>    
+
+<!------------------------ gallery ------------------------------>
+
+    <section id="gallery" style="font-family: Arial, sans-serif;
+      margin: 0; padding: 0; background-color: #f9f9f9; color: #333;">
+       <div class="gallery-container">
+    <h2 style="color: #1f0553;">Our Gallery</h2>
+    <p>View Our Gallery</p>
+
+    <!-- Filter Buttons -->
+    <div class="filter-buttons">
+      <button class="active" data-filter="all">All</button>
+      <button data-filter="claustrophobia">Claustrophobia</button>
+      <button data-filter="nyctophobia">Nyctophobia</button>
+      <button data-filter="aquaphobia">Aquaphobia</button>
+    </div>
+
+    <!-- Gallery Grid -->
+    <div class="gallery-grid">
+      <!-- Claustrophobia Images -->
+      <div class="gallery-item claustrophobia active">
+        <img src="assets/gallery/claustro1.png" alt="Claustrophobia 1">
+      </div>
+      <div class="gallery-item claustrophobia active">
+        <img src="assets/gallery/claustro2.png" alt="Claustrophobia 2">
+      </div>
+      <!-- <div class="gallery-item claustrophobia active">
+        <img src="" alt="Claustrophobia 2">
+      </div> -->
+      <!-- Nyctophobia Images -->
+      <div class="gallery-item nyctophobia active">
+        <img src="assets/gallery/nyctophobia1.png" alt="Nyctophobia 1">
+      </div>
+      <div class="gallery-item nyctophobia active">
+        <img src="assets/gallery/nyctophobia2.png" alt="Nyctophobia 2">
+      </div>
+      <div class="gallery-item nyctophobia active">
+        <img src="assets/gallery/nyctophobia3.png" alt="Nyctophobia 2">
+      </div>
+      <!-- Aquaphobia Images -->
+      <div class="gallery-item aquaphobia active">
+        <img src="assets/gallery/hydrophobia1.png" alt="Aquaphobia 1">
+      </div>
+      <div class="gallery-item aquaphobia active">
+        <img src="assets/gallery/hydrophobia2.png" alt="Aquaphobia 2">
+      </div>
+      <!-- <div class="gallery-item aquaphobia">
+        <img src="" alt="Aquaphobia 2">
+      </div> -->
+    </div>
+  </div>
+    </section>
+
+<!---------------------------- contactus ------------------->  
+<section id="contact" style=" font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #ffffff;">
+
+<div class="contact-container">
+    <h2>Contact Form</h2>
+    <form>
+      <label for="name">Enter Name:</label>
+      <input type="text" id="name" placeholder="Enter Name" required>
+
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" placeholder="Enter Email Address" required>
+
+      <label for="mobile">Mobile Number:</label>
+      <input type="tel" id="mobile" placeholder="Enter Mobile Number" required>
+
+      <label for="message">Enter Message:</label>
+      <textarea id="message" placeholder="Enter Your Message"></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+
+</section>
+
+ <!-- Footer Section -->
+ <footer>
+  <div class="footer-container">
+      <div class="footer-section about">
+          <h2>About Us</h2>
+          <p>We provide the best services for mental health support and therapy.</p>
+          <div class="social-icons">
+              <a href="#"><i class="fab fa-facebook"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-linkedin"></i></a>
+          </div>
+      </div>
+
+      <div class="footer-section links">
+          <h2>Quick Links</h2>
+          <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#fetures">Services</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#gallery">Gallery</a></li>
+              <li><a href="#contact">Contact</a></li>
+          </ul>
+      </div>
+
+      <div class="footer-section contact">
+          <h2>Contact Us</h2>
+          <p>Email: support@vrhealer.com</p>
+          <p>Phone: +123 456 7890</p>
+          <p>Address: 123, Therapy Lane, Mental Health City</p>
+      </div>
+  </div>
+
+  <div class="footer-bottom">
+      <p>&copy; 2025 VR Healer. All Rights Reserved.</p>
+  </div>
+
+  <!-- Back to Top Button -->
+  <button id="backToTop">↑</button>
+</footer>
+
+
+
+<!-- Your custom JavaScript -->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script> -->
+<!-- Include Firebase App -->
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  
+<!-- Include Firebase Database -->
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+<!-- <script src="https://www.gstatic.com/firebasejs/9.15.0/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.15.0/firebase.js"></script> -->
+
+<script src="app.js" defer></script>
+<script src="script.js"></script>
+
+
+<!------------------- About Script ------------->
+<script>
+  const aboutSection = document.querySelector(".about-section");
+  const options = {
+    threshold: 0.5
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        aboutSection.style.transition = "all 0.5s ease";
+        aboutSection.style.transform = "translateY(0)";
+        aboutSection.style.opacity = "1";
+      }
+    });
+  }, options);
+
+  aboutSection.style.opacity = "0";
+  aboutSection.style.transform = "translateY(50px)";
+  observer.observe(aboutSection);
+</script>
+
+
+
+<!--------------------- Gallery Script ------------------->
+<script>
+    // JavaScript for Filtering Gallery Items
+    const filterButtons = document.querySelectorAll(".filter-buttons button");
+    const galleryItems = document.querySelectorAll(".gallery-item");
+
+    filterButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        // Remove 'active' class from all buttons
+        filterButtons.forEach((btn) => btn.classList.remove("active"));
+        // Add 'active' class to the clicked button
+        button.classList.add("active");
+
+        // Get the filter value
+        const filter = button.getAttribute("data-filter");
+
+        // Show/Hide Gallery Items
+        galleryItems.forEach((item) => {
+          if (filter === "all" || item.classList.contains(filter)) {
+            item.classList.add("active");
+          } else {
+            item.classList.remove("active");
+          }
+        });
+      });
+    });
+  </script>
+
+<!------------------ Contact Script -------------->
+<script>
+  document.querySelector("form").addEventListener("submit", function (event) {
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const mobile = document.getElementById("mobile").value.trim();
+    const message = document.getElementById("message").value.trim();
+
+    if (!name || !email || !mobile || !message) {
+      alert("Please fill out all fields.");
+      event.preventDefault();
+    } else {
+      alert("Thank you for your message!");
+    }
+  });
+</script>
+
+<!-- ---------------------------Footer Script ---------------------->
+ <script>
+  // Back to Top Button
+const backToTopBtn = document.getElementById("backToTop");
+
+window.onscroll = function () {
+    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+        backToTopBtn.style.display = "block";
+    } else {
+        backToTopBtn.style.display = "none";
+    }
+};
+
+// Smooth Scroll to Top
+backToTopBtn.addEventListener("click", function () {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+});
+ </script>
+
+
+</body>
+</html>
