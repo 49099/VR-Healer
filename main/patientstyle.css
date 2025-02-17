@@ -1,0 +1,172 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Header */
+.dashboard-header {
+    background-color: #441771;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    background-color: #1f0553;
+    padding-top: 20px;
+}
+
+.sidebar a {
+    display: block;
+    color: white;
+    padding: 15px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+.sidebar a.active {
+    background-color: #604a88;
+    font-weight: bold;
+}
+
+
+.sidebar a:hover {
+    background-color: #604a88;
+}
+
+/* Content Area */
+#content {
+    margin-left: 260px;
+    padding: 20px;
+}
+
+/* Sections */
+.section {
+    display: none;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Show Active Section */
+.section.active {
+    display: block;
+}
+
+/* Profile Image */
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Buttons */
+button {
+    background-color: #441771;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #604a88;
+}
+
+/* Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+table th {
+    background-color: #441771;
+    color: white;
+}
+
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+    #content {
+        margin-left: 0;
+    }
+}
+/* Book Appointment Section */
+#bookAppointment {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+    margin: 40px auto;
+}
+
+#bookAppointment h3 {
+    text-align: center;
+    color: #441771;
+    margin-bottom: 20px;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+#bookAppointment label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+    color: #333;
+}
+
+#bookAppointment select,
+#bookAppointment input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    background: #f9f9f9;
+}
+
+#bookAppointment select:focus,
+#bookAppointment input:focus {
+    outline: none;
+    border-color: #441771;
+    box-shadow: 0px 0px 5px rgba(68, 23, 113, 0.5);
+}
+
+#therapistDetails {
+    background: #f4f4f4;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    font-size: 15px;
+    color: #333;
+}
+
+#submitAppointment {
+    width: 100%;
+    background-color: #441771;
+    color: white;
+    border: none;
+}

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Therapist Dashboard</title>
+    <link rel="stylesheet" href="therapiststyle.css">
+</head>
+<body>
+    <div class="dashboard">
+        <aside class="sidebar">
+            <h2 style="border-bottom: solid;">Therapist Dashboard</h2>
+        
+                <a href="#profile">My Profile</a>
+                <a href="#availability">Set Availability</a>
+                <a href="#appointments">Appointments</a>
+                <a href="#progress">Add Progress</a>
+                <a href="#phobias">Phobias</a>
+                <a href="#" id="logoutBtn">Logout</a>
+            
+        </aside>
+        <main class="content">
+            <section id="profile">
+                <h3>My Profile</h3>
+                <img id="profilePic" src="default-user.png" alt="Profile Picture">
+                <p><strong>Name:</strong> <span id="therapistName"></span></p>
+                <p><strong>Email:</strong> <span id="therapistEmail"></span></p>
+                <p><strong>Phone:</strong> <span id="therapistPhone"></span></p>
+                <p><strong>Gender:</strong> <span id="therapistGender"></span></p>
+                <p><strong>Specialization:</strong> <span id="therapistSpecialization"></span></p>
+                <p><strong>Education:</strong> <span id="therapistEducation"></span></p>
+                <p><strong>Address:</strong> <span id="therapistAddress"></span></p>
+                <p><strong>Consultation Fee:</strong> <span id="therapistFee"></span></p>
+                <p><strong>CV:</strong> <a id="therapistCV" href="#" target="_blank">No CV Available</a></p>
+            </section>
+
+            <section id="availability" style="padding: 16px; background: #f8f9fa; border-radius: 8px;">
+                <h3 style="color: #441771;">Set Availability</h3>
+                
+                <label for="availabilityDays" style="font-weight: bold; color: black;">Select Days:</label>
+                <select id="availabilityDays" multiple style="width: 100%; padding: 8px; margin-bottom: 8px; border-radius: 4px; border: 1px solid #ccc;">
+                    <option value="Monday">Monday</option>
+                    <option value="Tuesday">Tuesday</option>
+                    <option value="Wednesday">Wednesday</option>
+                    <option value="Thursday">Thursday</option>
+                    <option value="Friday">Friday</option>
+                    <option value="Saturday">Saturday</option>
+                    <option value="Sunday">Sunday</option>
+                </select>
+            
+                <label for="availabilityStartTime" style="font-weight: bold; color: black;">Start Time:</label>
+                <input type="time" id="availabilityStartTime" style="width: 100%; padding: 5px; margin-bottom: 8px; border-radius: 4px; border: 1px solid #ccc;">
+                
+                <label for="availabilityEndTime" style="font-weight: bold; color: black;">End Time:</label>
+                <input type="time" id="availabilityEndTime" style="width: 100%; padding: 5px; margin-bottom: 12px; border-radius: 4px; border: 1px solid #ccc;">
+                
+                <button id="saveAvailability" style="background: #441771; color: rgb(255, 255, 255); padding: 10px; border: none; border-radius: 4px; cursor: pointer; width: 100%;">Save</button>
+            
+                <h4 style="margin-top: 16px; color: #441771;">Current Availability</h4>
+                <table id="availabilityTable" style="width: 100%; border-collapse: collapse; margin-top: 10px;">
+                    <thead>
+                        <tr style="background: #5271a1; color: white;">
+                            <th style="padding: 8px;">Days</th>
+                            <th style="padding: 8px;">Time</th>
+                            <th style="padding: 8px;">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Availability rows will be appended here dynamically -->
+                    </tbody>
+                </table>
+            </section>
+            
+            
+            
+            <section id="appointments">
+                <h3>Appointments</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Patient Name</th>
+                            <th>Specialization</th>
+                            <th>Consultant Fee</th>
+                            <th>Appointment Date</th>
+                            <th>Appointment Time</th>
+                            <th>Created At</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="appointmentsTableBody">
+                        <!-- Appointment data will be inserted here dynamically -->
+                    </tbody>
+                </table>
+            </section>
+            <section id="progress">
+                <h3>Add Progress</h3>
+                <select id="patientList"></select>
+                <input type="number" id="sessionNumber" placeholder="Enter session number">
+                <textarea id="sessionProgress" placeholder="Enter session notes"></textarea>
+                <button id="saveProgress">Save</button>
+            </section>
+
+            <section id="phobias" style="padding: 16px; background: #f8f9fa; border-radius: 8px;">
+                <h3 style="color: #441771;">Phobias</h3>
+                
+                <div class="phobia-block">
+                    <button class="phobia-toggle" data-target="claustrophobia">Claustrophobia</button>
+                    <div class="phobia-levels" id="claustrophobia" style="display: none;">
+                        <h4>Levels</h4>
+                        <iframe width="100%" height="200" src="https://www.youtube.com/embed/video1" frameborder="0"></iframe>
+                        <iframe width="100%" height="200" src="https://www.youtube.com/embed/video2" frameborder="0"></iframe>
+                        <iframe width="100%" height="200" src="https://www.youtube.com/embed/video3" frameborder="0"></iframe>
+                    </div>
+                </div>
+                
+                <div class="phobia-block">
+                    <button class="phobia-toggle" data-target="nyctophobia">Nyctophobia</button>
+                    <div class="phobia-levels" id="nyctophobia" style="display: none;">
+                        <h4>Levels</h4>
+                        <iframe width="100%" height="200" src="https://www.youtube.com/embed/video4" frameborder="0"></iframe>
+                        <iframe width="100%" height="200" src="https://www.youtube.com/embed/video5" frameborder="0"></iframe>
+                        <iframe width="100%" height="200" src="https://www.youtube.com/embed/video6" frameborder="0"></iframe>
+                    </div>
+                </div>
+                
+                <div class="phobia-block">
+                    <button class="phobia-toggle" data-target="hydrophobia">Hydrophobia</button>
+                    <div class="phobia-levels" id="hydrophobia" style="display: none;">
+                        <h4>Levels</h4>
+                        <iframe width="100%" height="200" src="https://www.youtube.com/embed/video7" frameborder="0"></iframe>
+                        <iframe width="100%" height="200" src="https://www.youtube.com/embed/video8" frameborder="0"></iframe>
+                        <iframe width="100%" height="200" src="https://www.youtube.com/embed/video9" frameborder="0"></iframe>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+    <script>
+     document.querySelectorAll('.phobia-toggle').forEach(button => {
+            button.addEventListener('click', () => {
+                document.querySelectorAll('.phobia-levels').forEach(section => {
+                    if (section.id !== button.dataset.target) {
+                        section.style.display = 'none';
+                    }
+                });
+                
+                const target = document.getElementById(button.dataset.target);
+                target.style.display = target.style.display === 'none' ? 'block' : 'none';
+            });
+        });
+    </script>
+    <script type="module" src="dashboard.js"></script>
+</body>
+</html>

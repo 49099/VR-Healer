@@ -1,0 +1,197 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #020304;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.dashboard {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+
+.sidebar {
+   
+    width: 250px;
+    height: 100vh;
+    background-color: #1f0553;
+    padding-top: 20px;
+    ;
+}
+
+.sidebar a {
+    display: block;
+    color: white;
+    padding: 15px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+.sidebar a:hover {
+    background-color: #604a88;
+}
+
+/* .sidebar h2 {
+    color: #bcbefa;
+    text-align: center;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 20px 0;
+}
+
+.sidebar ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    background-color: #441771;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.sidebar ul li a:hover {
+    background-color: #8a82a9;
+} */
+
+.content {
+    flex: 1;
+    padding: 20px;
+    background-color: rgb(197, 181, 181);
+    overflow-y: auto;
+}
+
+section {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+h3{
+    color: black;
+}
+p{
+    color: black;
+}
+
+button {
+    background-color: #39066f;
+    color: #ffffff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #8a82a9;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #cccccc;
+    color: #020304;
+}
+
+#profilePic {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: block;
+    margin-bottom: 10px;
+}
+
+#therapistCV {
+    color: #161a81;
+    text-decoration: none;
+}
+
+#therapistCV:hover {
+    text-decoration: underline;
+}
+
+/* Appointment Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    color: #000523;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+th, td {
+    border: 1px solid #2e1c5d;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #441771;
+    color: white;
+}
+
+.acceptBtn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.rejectBtn {
+    background-color: #D32F2F;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.acceptBtn:hover, .rejectBtn:hover {
+    opacity: 0.8;
+}
+
+#availability table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+#availability th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+#availability th {
+    background-color: #441771;
+    color: white;
+}
+
+#availability .delete-btn {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+#availability .delete-btn:hover {
+    background-color: #c0392b;
+}
+
+

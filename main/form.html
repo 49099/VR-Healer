@@ -1,0 +1,141 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register & Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="firebaseauth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>  
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+</head>
+<body>
+
+     <div class="back-arrow" onclick="goHome()">
+        <i class="fas fa-arrow-left"></i>
+    </div>
+
+    <div class="container" id="signup">
+        <h1 class="form-title">Registration <a href="/index.html"></a></h1>
+        <form id="registrationForm">
+          <div id="signUpMessage" class="messageDiv" style="display:none;"></div>
+          <div class="input-group">
+             <i class="fas fa-user"></i>
+             <input type="text" id="name" placeholder="Enter your full name" required>
+          </div>
+          <div class="input-group">
+              <i class="fas fa-envelope"></i>
+              <input type="email" id="rEmail" placeholder="Enter your email address" required>
+          </div>
+          <div class="input-group">
+              <i class="fas fa-lock"></i>
+              <input type="password" id="rPassword" placeholder="Create a strong password" required>
+          </div>
+          <div class="input-group">
+              <i class="fas fa-phone"></i>
+              <input type="text" id="phone" placeholder="Enter your phone number" required>
+          </div>
+          <div class="input-group">
+              <select id="role" required>
+                  <option value="" disabled selected>-- Select your role --</option>
+                  <option value="Therapist">Therapist</option>
+                  <option value="Patient">Patient</option>
+              </select>
+          </div>
+
+          <!-- Gender Field -->
+          <div class="input-group">
+              <select id="gender" required>
+                  <option value="" disabled selected>-- Select your gender --</option>
+                  <option value="Male">Male</option>
+                  <option value="Female">Female</option>
+                  <option value="Other">Other</option>
+              </select>
+          </div>
+
+          <!-- Therapist Fields -->
+          <div id="therapistFields" style="display:none;">
+              <div class="input-group">
+                  <i class="fas fa-graduation-cap"></i>
+                  <input type="text" id="education" placeholder="Enter your educational qualifications">
+              </div>
+              <div class="input-group">
+                  <i class="fas fa-dollar-sign"></i>
+                  <input type="text" id="consultationFee" placeholder="Enter your consultation fee">
+              </div>
+              <div class="input-group">
+                  <select id="specialization">
+                      <option value="" disabled selected>-- Select your specialization --</option>
+                      <option value="Nyctophobia">Nyctophobia</option>
+                      <option value="Hydrophobia">Hydrophobia</option>
+                      <option value="Claustrophobia">Claustrophobia</option>
+                  </select>
+              </div>
+              <div class="input-group">
+                <i class="fas fa-map-marker-alt"></i>
+                <input type="text" id="address" placeholder="Enter your full address">
+            </div>
+              <div class="input-group">
+                  <i class="fas fa-file-upload"></i>
+                  <label for="cvUpload" >Upload your CV (PDF only)</label>
+                  <input type="file" id="cvUpload" accept="application/pdf">
+              </div>
+              <div class="input-group">
+                  <i class="fas fa-image"></i>
+                  <label for="therapistProfilePicture" >Upload your profile picture (image only)
+
+                  </label>
+                  <input type="file" id="therapistProfilePicture" accept="image/*">
+              </div>
+          </div>
+
+          <!-- Patient Fields -->
+          <div id="patientFields" style="display:none;">
+              <div class="input-group">
+                  <i class="fas fa-map-marker-alt"></i>
+                  <input type="text" id="address" placeholder="Enter your full address">
+              </div>
+              <div class="input-group">
+                  <i class="fas fa-image"></i>
+                  <label for="patientProfilePicture" >Upload your profile picture (image only)</label>
+                  <input type="file" id="patientProfilePicture" accept="image/*">
+              </div>
+          </div>
+  
+         <button class="btn" id="submitSignUp">Sign Up</button>
+        </form>
+        <div class="links">
+            <p>Already have an account?</p>
+            <button id="signInButton">Login</button>
+        </div>
+    </div>
+
+    <div class="container" id="signIn">
+        <h1 class="form-title" >Login<a href="/index.html"></a></h1>
+        <form method="post" action="">
+          <div class="input-group">
+              <i class="fas fa-envelope"></i>
+              <input type="email" id="email" placeholder="Enter your email address" required>
+          </div>
+          <div class="input-group">
+              <i class="fas fa-lock"></i>
+              <input type="password" id="password" placeholder="Enter your password" required>
+          </div>
+         <button class="btn" id="submitSignIn">Sign In</button>
+        </form>
+        <div class="links">
+          <p>Don't have an account yet?</p>
+          <button id="signUpButton">Create an account</button>
+        </div>
+    </div>
+    <!-- <div id="loginErrorMessage" class="error-message" style="display:none;"></div> -->
+
+
+    <script src="script.js"></script>
+</body>
+</html>
+

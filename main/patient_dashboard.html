@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Dashboard</title>
+    <link rel="stylesheet" href="patientstyle.css">
+</head>
+<body>
+    <!-- <div class="dashboard-header">VR HEALER PORTAL</div> -->
+    
+    <div class="sidebar">
+        <h2 style="color: white; border-bottom: solid;">Patient Dashboard</h2>
+        <a href="#" id="myProfileTab">My Profile</a>
+        <a href="#" id="bookAppointmentTab">Book Appointment</a>
+        <a href="#" id="appointmentHistoryTab">Appointment History</a>
+        <a href="#" id="logoutButton">Logout</a>
+    </div>
+
+    <div id="content">
+        <!-- My Profile Section -->
+        <div id="myProfile" class="section">
+            <img id="profileImage" src="./default-user.png" alt="Profile Image" class="profile-pic"/>
+            <h2 id="fullName"></h2>
+            <p>Email: <span id="email"></span></p>
+            <p>Phone: <span id="phone"></span></p>
+            <p>Address: <span id="address"></span></p>
+            <button id="editProfileButton">Edit Profile</button>
+            <button id="changePasswordButton">Change Password</button>
+        </div>
+
+        <!-- Edit Profile Section -->
+        <div id="editProfile" class="section">
+            <h2>Edit Profile</h2>
+            <input type="text" id="editFullName" placeholder="Full Name" />
+            <input type="email" id="editEmail" placeholder="Email" />
+            <input type="tel" id="editPhone" placeholder="Phone" />
+            <textarea id="editAddress" placeholder="Address"></textarea>
+            <input type="file" id="editProfileImage" accept="image/*" />
+            <button id="saveProfileButton">Save</button>
+            <button id="cancelEditButton">Cancel</button>
+        </div>
+
+        <!-- Change Password Section -->
+        <div id="changePassword" class="section">
+            <h2>Change Password</h2>
+            <input type="password" id="currentPassword" placeholder="Current Password" />
+            <input type="password" id="newPassword" placeholder="New Password" />
+            <input type="password" id="confirmNewPassword" placeholder="Confirm New Password" />
+            <button id="savePasswordButton">Change Password</button>
+            <button id="cancelPasswordChange">Cancel</button>
+        </div>
+
+        <!-- Book Appointment Section -->
+        <div id="bookAppointment" class="section">
+            <h3>Book Appointment</h3>
+            <label for="specialization">Therapist Specialization:</label>
+            <select id="specialization">
+                <option value="">Select Specialization</option>
+            </select>
+            <label for="therapists">Therapists:</label>
+            <select id="therapists">
+                <option value="">Select Therapist</option>
+            </select>
+            <div id="therapistDetails"></div>
+            <label for="appointmentDate">Date:</label>
+            <input type="date" id="appointmentDate">
+            <label for="appointmentTime">Time:</label>
+            <input type="time" id="appointmentTime">
+            <button id="submitAppointment">Book Appointment</button>
+        </div>
+
+        <!-- Appointment History Section -->
+        <div id="appointmentHistory" class="section">
+            <h3>Appointment History</h3>
+            <table id="appointmentTable">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Therapist Name</th>
+                        <th>Specialization</th>
+                        <th>Date/Time</th>
+                        <th>Status</th>
+                        <th>Progress</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+
+    <script type="module" src="./patientdashboard.js"></script>
+</body>
+</html>
